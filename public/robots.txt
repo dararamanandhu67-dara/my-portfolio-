@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /resume/
+
+Sitemap: https://ramanandhu.vercel.app/sitemap.xml

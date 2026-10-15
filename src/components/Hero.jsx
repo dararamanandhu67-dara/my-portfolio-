@@ -1,7 +1,8 @@
-import { Download, FolderOpen, Github, Linkedin, ArrowRight } from "lucide-react";
+import { FolderOpen, Github, Linkedin, ArrowRight } from "lucide-react";
 import { personal, socials } from "../data/portfolio";
 import ParticleCanvas from "./ParticleCanvas";
 import Reveal from "./Reveal";
+import ResumeButton from "./ResumeButton";
 import TiltCard from "./TiltCard";
 
 const floatingChips = [
@@ -58,10 +59,7 @@ export default function Hero() {
                 View My Projects
                 <ArrowRight size={16} aria-hidden="true" />
               </a>
-              <a href={personal.resumeUrl} className="btn-resume" download>
-                <Download size={16} aria-hidden="true" />
-                Resume
-              </a>
+              <ResumeButton className="btn-resume" />
             </div>
           </Reveal>
 

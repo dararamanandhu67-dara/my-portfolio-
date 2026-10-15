@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Download, Menu, X } from "lucide-react";
-import { personal, navLinks } from "../data/portfolio";
+import { Menu, X } from "lucide-react";
+import { navLinks } from "../data/portfolio";
+import ResumeButton from "./ResumeButton";
 
 /**
  * Sticky navbar: glass background on scroll, active section highlight,
@@ -85,10 +86,12 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden lg:block">
-          <a href={personal.resumeUrl} className="btn-resume !px-5 !py-2 text-sm" download>
-            <Download size={15} aria-hidden="true" />
-            Resume
-          </a>
+          <ResumeButton
+            className="btn-resume !px-5 !py-2 text-sm"
+            iconSize={15}
+            busyLabel="Preparing…"
+            doneLabel="Done"
+          />
         </div>
 
         <button
@@ -121,10 +124,7 @@ export default function Navbar() {
             </li>
           ))}
           <li className="mt-2">
-            <a href={personal.resumeUrl} className="btn-resume w-full justify-center" download>
-              <Download size={16} aria-hidden="true" />
-              Resume
-            </a>
+            <ResumeButton className="btn-resume w-full justify-center" />
           </li>
         </ul>
       </div>
